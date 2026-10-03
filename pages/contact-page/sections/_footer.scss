@@ -75,8 +75,6 @@
                 gap: 1rem;
             }
             &__item{
-                ;
-     
                 @include gradient-bg-border;
                 @include transition(all, 0.5s, ease);
     
@@ -85,6 +83,10 @@
     
                 &:hover{
                     transform: scale(1.2);
+
+                    .social__icon{
+                        color: #9EFF00;
+                    }
                 }
         
                 &:active{
@@ -97,11 +99,7 @@
     
                 margin: 1.42rem;
                 width: 1.714rem;
-                height: 1.714rem;
-    
-                &:hover{
-                    color: #9EFF00;
-                }        
+                height: 1.714rem;      
             }
         }
         &__copyright{

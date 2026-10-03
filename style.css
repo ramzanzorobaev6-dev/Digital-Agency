@@ -1700,6 +1700,9 @@ h1, h2, h3, h4, h5, h6, p {
 .home-page .footer .social__item:hover {
   transform: scale(1.2);
 }
+.home-page .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .home-page .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -1709,9 +1712,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.home-page .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .home-page .footer__copyright {
   max-width: 1600px;
@@ -3061,6 +3061,9 @@ h1, h2, h3, h4, h5, h6, p {
 .services .footer .social__item:hover {
   transform: scale(1.2);
 }
+.services .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .services .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -3070,9 +3073,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.services .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .services .footer__copyright {
   max-width: 1600px;
@@ -3952,6 +3952,9 @@ h1, h2, h3, h4, h5, h6, p {
 .works .footer .social__item:hover {
   transform: scale(1.2);
 }
+.works .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .works .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -3961,9 +3964,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.works .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .works .footer__copyright {
   max-width: 1600px;
@@ -5086,6 +5086,9 @@ h1, h2, h3, h4, h5, h6, p {
 .process .footer .social__item:hover {
   transform: scale(1.2);
 }
+.process .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .process .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -5095,9 +5098,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.process .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .process .footer__copyright {
   max-width: 1600px;
@@ -6039,6 +6039,9 @@ h1, h2, h3, h4, h5, h6, p {
 .about .footer .social__item:hover {
   transform: scale(1.2);
 }
+.about .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .about .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -6048,9 +6051,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.about .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .about .footer__copyright {
   max-width: 1600px;
@@ -7040,6 +7040,9 @@ h1, h2, h3, h4, h5, h6, p {
 .careers .footer .social__item:hover {
   transform: scale(1.2);
 }
+.careers .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .careers .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -7049,9 +7052,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.careers .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .careers .footer__copyright {
   max-width: 1600px;
@@ -8023,6 +8023,9 @@ h1, h2, h3, h4, h5, h6, p {
 .contact .contacts__info .social__item:hover {
   transform: scale(1.2);
 }
+.contact .contacts__info .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .contact .contacts__info .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -8032,9 +8035,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.contact .contacts__info .social__icon:hover {
-  color: #9EFF00;
 }
 
 .contact .questions {
@@ -8387,6 +8387,9 @@ h1, h2, h3, h4, h5, h6, p {
 .contact .footer .social__item:hover {
   transform: scale(1.2);
 }
+.contact .footer .social__item:hover .social__icon {
+  color: #9EFF00;
+}
 .contact .footer .social__item:active {
   transform: scale(0.95);
   transition: transform 0.1s;
@@ -8396,9 +8399,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.42rem;
   width: 1.714rem;
   height: 1.714rem;
-}
-.contact .footer .social__icon:hover {
-  color: #9EFF00;
 }
 .contact .footer__copyright {
   max-width: 1600px;

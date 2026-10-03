@@ -3,7 +3,6 @@
 .home-page{
     .footer{
         padding: 3.57rem 5.714rem;
-        ;
     
         width: 100%;
     
@@ -56,7 +55,6 @@
         }
         .social{ // Компонент ссылок на соцсети
             padding: 1rem;
-            ;
         
             display: flex;
             justify-content: space-between;
@@ -76,8 +74,6 @@
                 gap: 1rem;
             }
             &__item{
-                ;
-     
                 @include gradient-bg-border;
                 @include transition(all, 0.5s, ease);
     
@@ -86,6 +82,10 @@
     
                 &:hover{
                     transform: scale(1.2);
+
+                    .social__icon{
+                        color: #9EFF00;
+                    }
                 }
         
                 &:active{
@@ -98,11 +98,7 @@
     
                 margin: 1.42rem;
                 width: 1.714rem;
-                height: 1.714rem;
-    
-                &:hover{
-                    color: #9EFF00;
-                }        
+                height: 1.714rem;      
             }
         }
         &__copyright{
@@ -111,7 +107,6 @@
             
             padding-block: 1.14rem;
             padding-top: 3.57rem;
-            ;
         
             display: flex;
             align-items: center;
@@ -129,7 +124,6 @@
         }
         .contact{ // Компонент с вариантами связи
             padding-bottom: 1rem;
-            ;
     
             display: flex;
             justify-content: center;
