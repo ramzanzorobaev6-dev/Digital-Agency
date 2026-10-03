@@ -64,8 +64,7 @@
     }
     &__card{
         padding-bottom: 7.14rem;
-        ;
-
+        
         display: grid;
         grid-template-rows: 10rem;
 
@@ -157,7 +156,7 @@
                 width: 2.42rem;
                 height: 2.42rem;
         
-                background-image: url(/pages/works-page/icons/arrow/arrow-icon.svg);
+                background-image: url('./pages/works-page/icons/arrow/arrow-icon.svg');
                 background-size: contain;
                 background-repeat: no-repeat;
         

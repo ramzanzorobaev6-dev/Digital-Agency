@@ -3672,7 +3672,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 17%;
   width: 2.42rem;
   height: 2.42rem;
-  background-image: url(/pages/works-page/icons/arrow/arrow-icon.svg);
+  background-image: url("./pages/works-page/icons/arrow/arrow-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
