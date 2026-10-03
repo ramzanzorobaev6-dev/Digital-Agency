@@ -6952,8 +6952,12 @@ h1, h2, h3, h4, h5, h6, p {
   .careers .positions .vacancies__card:last-child .vacancies__card-button {
     align-self: center;
   }
+  .careers .positions .vacancies__card:last-child .vacancies__description {
+    align-items: center;
+  }
   .careers .positions .vacancies__card:last-child .vacancies__description-text {
     text-align: center;
+    max-width: 25rem;
   }
   .careers .positions .vacancies__card:last-child .vacancies__card-button {
     width: auto;
@@ -6970,6 +6974,10 @@ h1, h2, h3, h4, h5, h6, p {
   }
   .careers .positions .vacancies__description-text {
     text-align: center;
+    max-width: 25rem;
+  }
+  .careers .positions .vacancies__description {
+    align-items: center;
   }
   .careers .positions .vacancies__card-button {
     width: auto;
