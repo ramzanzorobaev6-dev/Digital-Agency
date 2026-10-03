@@ -39,7 +39,7 @@
             position: relative;
             z-index: 4;
 
-            background-image: url('/pages/about-page/icons/logo-bg.png');
+            background-image: url('./pages/about-page/icons/logo-bg.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -75,7 +75,7 @@
                 width: 100%;
                 height: 100%;
             
-                background-image: url('/pages/about-page/images/header-block.svg');
+                background-image: url('./pages/about-page/images/header-block.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
@@ -121,7 +121,7 @@
                     width: 100%;
                     height: 100%;
                 
-                    background-image: url('/pages/about-page/icons/dust-bg.svg');
+                    background-image: url('./pages/about-page/icons/dust-bg.svg');
                     background-repeat: no-repeat;
                     background-size: contain;
                     background-position: center;

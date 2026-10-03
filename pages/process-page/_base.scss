@@ -69,6 +69,10 @@
             transition: transform 0.2s ease;
 
             transform: scale(1.2);
+
+            .social__icon{
+                color: #9EFF00;
+            }
         }
 
         .footer__copyright .contact:hover {

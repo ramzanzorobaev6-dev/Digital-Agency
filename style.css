@@ -162,6 +162,9 @@ h1, h2, h3, h4, h5, h6, p {
     transition: transform 0.2s ease;
     transform: scale(1.2);
   }
+  .home .footer .social__item:hover .social__icon {
+    color: #9EFF00;
+  }
   .home .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
   }
@@ -2088,6 +2091,9 @@ h1, h2, h3, h4, h5, h6, p {
     transition: transform 0.2s ease;
     transform: scale(1.2);
   }
+  .services .footer .social__item:hover .social__icon {
+    color: #9EFF00;
+  }
   .services .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
   }
@@ -3310,6 +3316,9 @@ h1, h2, h3, h4, h5, h6, p {
     transition: transform 0.2s ease;
     transform: scale(1.2);
   }
+  .works .footer .social__item:hover .social__icon {
+    color: #9EFF00;
+  }
   .works .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
   }
@@ -4194,6 +4203,9 @@ h1, h2, h3, h4, h5, h6, p {
   .process .footer .social__item:hover {
     transition: transform 0.2s ease;
     transform: scale(1.2);
+  }
+  .process .footer .social__item:hover .social__icon {
+    color: #9EFF00;
   }
   .process .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
@@ -5364,6 +5376,9 @@ h1, h2, h3, h4, h5, h6, p {
     transition: transform 0.2s ease;
     transform: scale(1.2);
   }
+  .about .footer .social__item:hover .social__icon {
+    color: #9EFF00;
+  }
   .about .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
   }
@@ -5627,7 +5642,7 @@ h1, h2, h3, h4, h5, h6, p {
   aspect-ratio: 650/570;
   position: relative;
   z-index: 4;
-  background-image: url("/pages/about-page/icons/logo-bg.png");
+  background-image: url("./pages/about-page/icons/logo-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -5654,7 +5669,7 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 7;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/about-page/images/header-block.svg");
+  background-image: url("./pages/about-page/images/header-block.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5688,7 +5703,7 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: 10;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/about-page/icons/dust-bg.svg");
+  background-image: url("./pages/about-page/icons/dust-bg.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -6350,6 +6365,9 @@ h1, h2, h3, h4, h5, h6, p {
   .careers .footer .social__item:hover {
     transition: transform 0.2s ease;
     transform: scale(1.2);
+  }
+  .careers .footer .social__item:hover .social__icon {
+    color: #9EFF00;
   }
   .careers .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
@@ -7296,6 +7314,7 @@ h1, h2, h3, h4, h5, h6, p {
 .contact .header__button,
 .contact .header .navigation__link,
 .contact .contacts .feedback__button,
+.contact .contacts__info .social__item,
 .contact .today .company-state__button,
 .contact .footer .navigation__link,
 .contact .footer .social__item,
@@ -7326,6 +7345,13 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #c5ff66;
     box-shadow: 2px 2px 5px 1px #9eff00;
   }
+  .contact .contacts__info .social__item:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.2);
+  }
+  .contact .contacts__info .social__item:hover .social__icon {
+    color: #9EFF00;
+  }
   .contact .today .company-state__button:hover {
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
     transform: translateY(-2px);
@@ -7339,6 +7365,9 @@ h1, h2, h3, h4, h5, h6, p {
     transition: transform 0.2s ease;
     transform: scale(1.2);
   }
+  .contact .footer .social__item:hover .social__icon {
+    color: #9EFF00;
+  }
   .contact .footer__copyright .contact:hover .footer .contact__icon {
     color: #9EFF00;
   }
@@ -7349,7 +7378,8 @@ h1, h2, h3, h4, h5, h6, p {
 .contact .header__button:active,
 .contact .header .navigation__link:active,
 .contact .hero .button--green:active,
-.contact .contacts .feedback__button:hover,
+.contact .contacts .feedback__button:active,
+.contact .contacts__info .social__item:active,
 .contact .today .company-state__button:active,
 .contact .footer .navigation__link:active,
 .contact .footer .social__item:active {

@@ -12,6 +12,7 @@
     .header__button,
     .header .navigation__link,
     .contacts .feedback__button,
+    .contacts__info .social__item,
     .today .company-state__button,
     .footer .navigation__link,
     .footer .social__item,
@@ -73,6 +74,16 @@
             box-shadow: 2px 2px 5px 1px $color-50-green;
         }
 
+        .contacts__info .social__item:hover {
+            transition: transform 0.2s ease;
+
+            transform: scale(1.2);
+
+            .social__icon{
+                color: #9EFF00;
+            }
+        }
+
        .today .company-state__button:hover{
             transition:
             transform 0.2s ease,
@@ -93,6 +104,10 @@
             transition: transform 0.2s ease;
 
             transform: scale(1.2);
+
+            .social__icon{
+                color: #9EFF00;
+            }
         }
 
         .footer__copyright .contact:hover {
@@ -115,7 +130,8 @@
     .header__button:active,
     .header .navigation__link:active,
     .hero .button--green:active,
-    .contacts .feedback__button:hover,
+    .contacts .feedback__button:active,
+    .contacts__info .social__item:active,
     .today .company-state__button:active,
     .footer .navigation__link:active,
     .footer .social__item:active {
