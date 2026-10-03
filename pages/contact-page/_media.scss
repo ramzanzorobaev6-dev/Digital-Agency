@@ -1,0 +1,298 @@
+@use '../../global' as *;
+
+//Общие медиа-запросы
+
+
+@media(max-width: 1300px){
+    .contact{
+        .feedback{
+            &__fieldset{
+                flex-direction: column;
+            }
+            &__field{
+                width: auto;
+            }
+        }
+        .checkbox__column {
+            flex-direction: column;
+            gap: 1.42rem;
+        }
+    }
+}
+@media(max-width: 1200px){
+    html{
+        font-size: 12px;
+    }
+    .contact{
+        .header__logo{
+            width: 8.57rem;
+            height: 2.85rem;
+        }
+        .hero::before{
+            height: 50%;
+            aspect-ratio: none;
+        }
+        
+    }
+}
+@media(max-width: 1045px){
+    .contact{
+        .header{
+            flex-direction: column;
+        }
+    }
+}
+@media(max-width: 1000px){
+    html{
+        font-size: 10px;
+    }
+    .contacts{
+        .contacts__info .working-days{
+            padding-right: 2.5rem;
+        }
+        .contacts__info .contacts__socials-wrapper{
+            padding-left: 2.5rem;
+        }
+    }
+}
+@media(max-width: 768px){
+    html{
+        font-size: 8px;
+    }
+    .contact{
+        .hero__text span{
+            color: $color-60-grey;
+            line-height: 3.57rem;
+            
+            margin: 0;
+            padding: 0;
+            background-color: $color-special-bg;
+        }
+        .hero .companies__card{
+            @include border-grey;
+        }
+        .questions .faq__columns{
+            flex-direction: column;
+            gap: 1.42rem;
+        }
+        .today__header{
+            flex-direction: column;
+            align-items: center;
+        }
+        .today__title, .today__text{
+            text-align: center;
+        }
+        .today__heading{
+            flex-direction: column;
+        }
+        .today .company-state{
+            flex-direction: column;
+        }
+        .today .company-state__description{
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .today .company-state__caption{
+            text-align: center;
+        }
+        .today .company-state__text{
+            text-align: center;
+            
+            margin: 0;
+            max-width: 300px;
+        }
+        .today .company-state__button{
+            max-width: 150px;
+            width: 100%;
+        }
+        .footer__main{
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .footer__main .navigation{
+            padding-block: 2.14rem;
+            width: 100%;
+    
+            @include border-grey;
+            border-inline: none;
+        }    
+        .footer__main .navigation-list{
+            justify-content: center;
+        }    
+        .footer .social{
+            width: 100%;
+    
+            flex-direction: column;
+        }
+        .footer__copyright{
+            flex-direction: column;
+            
+            border: none;
+        }
+        .footer__contacts{
+            width: 100%;
+            
+            flex-direction: column;
+        }
+        .footer__contact{
+            width: 100%;
+        }
+    }
+}
+@media(max-width: 600px){
+    .contact{
+        .contacts .contacts__info{
+            flex-direction: column;
+        }
+        .contacts__info .working-days{
+            padding-right: 0;
+
+            justify-content: center;
+
+            border: none;
+            border-bottom: 1px solid $color-20-grey;
+        }
+        .contacts__info .contacts__socials-wrapper{
+            padding-left: 0;
+            margin-bottom: 1.178rem;
+
+            justify-content: center;
+        }
+        .contacts .contacts__info .social{
+            justify-content: flex-start;
+
+            flex-direction: column;
+
+            border: none;
+        }
+        .contacts__buttons{
+            flex-direction: column;
+        }
+        .contacts__button{
+            max-width: 25rem;
+            width: 100%;
+        }
+    }
+}
+@media(max-width: 480px){
+    html{
+    font-size: 6px;
+    }
+    .contact{
+        .header{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header__logo{
+            width: 20rem;
+            height: 6.66rem;
+        }
+        .header__button{
+            display: none;
+        } 
+        .header__burger {
+            display: grid; // показываем бургер
+            align-items: center;
+            gap: 3px;
+        }
+        .header__burger span{
+            height: 1.5px;
+        }
+        .header__burger-wrapper{
+            display: flex;
+        }
+        .header .navigation {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            z-index: 30;
+            
+            padding: 6rem 2rem 2rem;
+            width: 40vw;
+            height: 100vh;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            
+            background: $color-10-grey;
+            
+            transition: right 0.4s ease;
+        }
+        .header .navigation__list {
+            width: 100%;
+    
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .header .navigation__link {
+            font-size: 2rem;
+        }
+        // Активное состояние — выезд панели
+        .header__toggle:checked ~ .navigation {
+            right: 0%;
+        }
+        .header__toggle:checked ~ .header__overlay {
+            opacity: 1;
+           
+            pointer-events: auto;
+        }
+        .hero__content-card{
+            border: none;
+        }
+        // .contacts__buttons{
+        //     flex-direction: column;
+        // }
+        // .contacts__button{
+        //     max-width: 25rem;
+        //     width: 100%;
+        // }
+    }
+}
+@media(max-width: 300px){
+    .contact{
+        .contacts .feedback__wrapper{
+            border: none;
+        }
+        .contacts .feedback__button{
+            width: 100%;
+        }
+    } 
+}
+@media(max-width: 270px){
+    .contact{
+        .header__logo{
+            width: 8.57rem;
+            height: 2.85rem;
+        }
+        .header__burger-wrapper{
+            border-radius: 2px;
+        }
+        .header__burger{
+            min-height: 0;
+            width: 1.41rem;
+            height: 1.41rem;
+            padding: 2px 2px;
+            
+            align-items: center;
+            gap: 1px;
+        }
+        .header__burger span{
+            height: 0.5px;
+
+            border-radius: 1px;
+        }
+        .contacts__buttons{
+            padding-inline: 3.3rem;
+        }
+        .contacts__button{
+            max-width: none;
+            width: 100%;
+        }
+        .contacts .contacts__info .working-days{
+           flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+@use '../core' as *;
+
+.works{
+    .cta{
+
+        @include header-section;
+
+        position: relative;
+
+        &::after{
+            content: '';
+            
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            height: 100%;
+            
+            opacity: 0.6;
+            background-image: url(/pages/services-page/images/components/bg-header-block.png);
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: right;
+
+            pointer-events: none;
+        }
+        
+        
+        &__heading{
+            padding-block: 8.57rem;
+            padding-inline: 4.28rem;
+            
+            position: relative;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3.57rem;
+            
+            background-color: rgba(0, 0, 0, 0.8);
+            
+            border-inline: 1px solid $color-20-grey;
+            
+            &::after{
+                content: '';
+            
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+            
+                width: 100%;
+                height: 100%;
+            
+                background-color: #acff24;
+    
+                opacity: 0.2;
+            }
+    
+            &::before{
+                content: '';
+            
+                position: absolute;
+                z-index: -2;
+                top: 0;
+                left: 0;
+    
+                width: 100%;
+                height: 100%;
+            
+                background-image: url(./pages/home-page/images/interest/header-bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: left;
+            } 
+        }  
+        &__logo{
+            width: 5.714rem;
+            height: 5.714rem;
+        }
+        &__description{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        &__title{
+            @include font(600, 3.42rem, $colorAbs-white);
+            text-align: center;
+        }
+        &__text{
+            @include font(400, 1.17rem, $color-90-grey);
+            text-align: center;
+            max-width: 1000px;
+        }
+        &__button{
+            @include green-button;
+            @include transition(all, 0.5s, ease);
+
+            cursor: pointer;
+            user-select: none;
+    
+            &:hover{
+                transform: translateY(-2px);
+
+                background-color: $color-70-green;
+                box-shadow: 2px 2px 5px 1px $color-50-green;
+            }
+    
+            &:active{
+                transform: scale(0.95);
+                transition: transform 0.1s;
+            }
+        }
+    }
+}

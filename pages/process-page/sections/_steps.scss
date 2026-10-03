@@ -1,0 +1,11 @@
+@use '../core' as *;
+
+.process{
+    .steps{
+        @include steps-section;
+
+        .sequence{
+            @include sequence;
+        }
+    }
+}

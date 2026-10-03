@@ -1,0 +1,76 @@
+@use '../core' as *;
+
+.careers{
+    .today{
+        padding: 5.714rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 3.57rem;
+
+        border-inline: 1px solid $color-20-grey;
+        border-top: 1px solid $color-20-grey;
+
+        &__header{
+            display: flex;
+            gap: 2.85rem;
+        }
+        &__logo{
+            padding: 2.5rem 2.5rem;
+            width: 10.714rem;
+            height: 10.714rem;
+
+            background-image: radial-gradient(rgb(158, 255, 0), rgba(158, 255, 0, 0));
+            background-color: #c5ff66;
+
+            border-radius: 0.8rem;
+        }
+        &__heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.42rem;
+        }
+        &__title{
+            @include font(500, 2.142rem, $color-60-grey);
+        }
+        &__text{
+            @include font(400, 1.28rem, $color-60-grey);
+        }
+        .company-state{ //Компонент текущего состояния компании
+            padding: 2.85rem 1.92rem;
+            ;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.42rem;
+
+            border: 1px solid $color-20-grey;
+            border-radius: 10px;
+
+            &__description{
+                display: flex;
+                align-items: center;
+
+            }
+            &__caption{
+                @include font(400, 1.42rem, $color-60-grey);
+            }
+            &__text{
+                @include font(400, 1.42rem, $colorAbs-white);
+
+                margin-inline: 1.42rem;
+                padding: 1rem 1.42rem;
+                ;
+
+                background-color: $color-15-grey;
+                border-radius: 10px;
+            }
+            &__button{
+                @include green-button;
+                white-space: nowrap;
+            }
+        }
+    }
+}

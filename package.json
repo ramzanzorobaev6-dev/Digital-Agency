@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "icons": "svgstore global/images/icons/source/*.svg > global/images/icons/sprite.svg && prettier --write global/images/icons/sprite.svg"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "svgstore": "^3.0.1"
+  }
+}

@@ -1,0 +1,165 @@
+@use 'vars' as *;
+
+// Универсальные
+@mixin font($weight: 400, $size: 1rem, $color: #000) {
+    font-family: 'Barlow', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin transition($properties: all, $duration: 0.3s, $easing: ease) {
+    transition: $properties $duration $easing;
+}
+
+// Во многих местах
+
+@mixin border-grey{ border: 1px solid $color-20-grey;}
+@mixin header-border {border-block: 1px solid $color-20-grey;}
+@mixin dark-border{ border: 1px solid $color-15-grey;}
+
+@mixin border-card { // Для карточек
+    @content;
+    
+    &:not(.first-in-row) {
+        border-top: 1px solid $color-20-grey;
+    }
+
+    @media(max-width: 768px) {
+        &.first-in-row:not(:first-child) { // Первая карточка с классом first-child не имеет верхнюю границу когда все выстраиваются в одну колонку
+            border-top: 1px solid $color-20-grey;
+        }
+    }
+}
+
+@mixin gradient-bg{background-image: linear-gradient(360deg, rgba(46, 46, 46, 0), rgb(46, 46, 46));}
+
+@mixin gradient-bg-border{
+    border: 1px solid transparent;
+    border-radius: 0.714rem;
+
+    padding: 1px;
+    background: 
+        linear-gradient(360deg, rgba(46, 46, 46, 0), rgb(46, 46, 46)) content-box,
+        linear-gradient(360deg, rgba(56, 56, 56, 0), rgb(56, 56, 56)) border-box;
+    background-origin: content-box, border-box;
+}
+
+.section{
+    margin-inline: auto;
+    padding: 2.85rem 5.71rem;
+    max-width: 1200px;
+}
+
+@mixin green-button{
+    @include font(500, 1.28rem, $colorAbs-black);
+    padding: 1.14rem 1.714rem;
+
+    border-radius: 10px;
+    border: none;
+    background-color: $color-50-green;
+
+    cursor: pointer;
+    user-select: none;
+    @include transition(all, 0.7s, ease);
+
+    &:hover{
+        transform: translateY(-2px);
+
+        background-color: $color-70-green;
+        box-shadow: 2px 2px 5px 1px $color-50-green;
+    }
+
+    &:active{
+        transform: scale(0.95);
+        transition: transform 0.1s;
+    }
+
+    @media(max-width: 768px){
+        border-radius: 5px;
+    }
+}
+
+//header в секциях с фоном
+@mixin header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &__title{
+        @include font(600, 3.42rem, $colorAbs-white);
+        text-align: center;
+    }
+    &__text{
+        @include font(400, 1.17rem, $color-90-grey);
+        text-align: center;
+        
+        max-width: 1000px;
+    }
+}
+@mixin header-wrapper{
+    position: relative;
+
+    &::after{
+        content: '';
+        
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        opacity: 0.6;
+        background-image: url(./pages/home-page/images/components/bg-header-block.png);
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: right;
+    }
+}
+@mixin header{
+    position: relative;
+
+    padding-block: 8.57rem;
+    padding-inline: 4.28rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    &::after{
+        content: '';
+        
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        background-color: #acff24;
+
+        opacity: 0.2;
+    }
+    &::before{
+        content: '';
+        
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        
+        background-image: url(./pages/home-page/images/components/bg-header.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

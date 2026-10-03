@@ -1,0 +1,17 @@
+@use '../core' as *;
+
+
+.careers{
+    .hero{
+        @include hero-section;
+    
+        border-inline: 1px solid $color-20-grey;
+    
+        &__header{
+            @include hero-header;
+        }
+        &__description{
+            @include hero-description;
+        }
+    }
+}

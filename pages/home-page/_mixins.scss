@@ -1,0 +1,35 @@
+@use '../../global' as *;
+
+@mixin illustration{
+    display: flex;
+    flex-direction: column;
+    gap: 2.85rem;
+
+    
+    &__icon-wrapper{
+        @include gradient-bg-border;//фон, границы в обёртке
+    }
+    &__icon{
+        margin: 0.85rem;//Меняем padding на margin так как внутри обертки нужно обеспечить размер место для видимости содержимого. Пишем размер paddingа в 2 раза меньше
+        ;
+
+        width: 2.85rem;
+        height: 2.85rem;   
+        
+    }
+    &__title{
+        @include font(600, 2.14rem, $colorAbs-white)
+    }
+}
+
+@mixin text{
+    @include font(400, 1.28rem, $color-90-grey);
+}
+
+@mixin label-font{
+    @include font(500, 1.57rem, $colorAbs-white)
+}
+@mixin input-font{
+    @include font(400, 1.28rem, $color-40-grey);
+}
+

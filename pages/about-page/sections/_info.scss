@@ -1,0 +1,238 @@
+@use '../core' as *;
+
+.about{
+    .info{
+        padding: 7.14rem 10.714rem;
+        ;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7.14rem;
+
+        border-top: 1px solid $color-20-grey;
+        border-inline: 1px solid $color-20-grey;
+
+        &__heading{
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.42rem;
+
+        }
+        &__title{
+            text-align: left;
+            @include font(600, 3.42rem, $colorAbs-white);
+        }
+        &__text{
+            @include font(400, 1.42rem, $color-90-grey);
+            
+            max-width: 42rem;
+            width: 100%;
+        }
+        .image{//Фон - картинка
+            width: 100%;
+            aspect-ratio: 650 / 570;
+
+            position: relative;
+            z-index: 4;
+
+            background-image: url('/pages/about-page/icons/logo-bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            pointer-events: none;
+            overflow: hidden;
+
+            border-radius: 1.14rem;
+
+            &::before{// Затемнение картинки + градиент
+                content: '';
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 6;
+
+                width: 100%;
+                height: 100%;
+                background-color: rgba(26, 26, 26, 0.7);
+                background-image: linear-gradient(180deg,
+                    rgba(25, 25, 25, 0), 
+                    rgba(25, 25, 25, 1) 90%
+                );
+            }
+            &::after{// Сетка
+                content: '';
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 7;
+                
+                width: 100%;
+                height: 100%;
+            
+                background-image: url('/pages/about-page/images/header-block.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                pointer-events: none;
+            }
+
+            &__background1{//Контейнер для эффектов
+                width: 100%;
+                height: 100%;
+
+                position: relative;
+                top: -200%;
+                z-index: 8;
+
+                background-color: #182700;
+                opacity: 0.5; 
+                border-radius: 1.14rem;
+
+                &::before{//Градиент в краю эффект
+                    content: "";
+                    
+                    position: absolute;
+                    bottom: 0;
+                    left: -14%;
+                    z-index: 9;
+                    
+                    width: 100%;
+                    height: 100%;
+                    
+                    background-image: linear-gradient(76deg, 
+                        rgb(255, 255, 255) -50%, 
+                        rgba(255, 255, 255, 0) 34%
+                    );
+                }
+                &::after{//Эффект грязи
+                    content: '';
+
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 10;
+                    
+                    width: 100%;
+                    height: 100%;
+                
+                    background-image: url('/pages/about-page/icons/dust-bg.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    pointer-events: none;
+                }
+            }
+
+            &__logo-wrapper{//Контейнер для логотипа
+                position: relative;
+                z-index: 14;
+                
+                width: 100%;
+                height: 100%;
+
+                &::after{
+                    content: '';
+
+                    width: 6.42rem;
+                    height: 6.42rem;
+                    
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 12;
+                    transform: translate(-50%, -50%);
+                    
+                    background-image: radial-gradient(rgba(158, 255, 0, 1), rgba(158, 255, 0, 0));
+                    
+                    background-color: $color-70-green;
+                    border-radius: 1.14rem;
+                }
+                &::before{ // светлое свечение
+                    content: '';
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 12;
+                    transform: translate(-50%, -50%);
+                
+                    width: 150%;
+                    aspect-ratio: 1; 
+                    
+                        background-image: radial-gradient(rgb(255, 255, 255) -200%, 
+                            rgba(255, 255, 255, 0) 35%
+                        );
+
+                    border-radius: 50%;
+                }
+            }
+            &__logo{
+                width: 4.5rem;
+                height: 4.5rem;
+                
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 14;
+                transform: translate(-50%, -50%);
+                
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                pointer-events: none;
+            }
+            &__sticks{
+                position: relative;
+                top: -100%;
+                z-index: 12;
+                
+
+                width: 100%;
+                height: 100%;
+
+                &::after{
+                    content: '';
+
+                    width: 100%;
+                    height: calc(1rem - 10px);
+                    
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 12;
+                    transform: translate(-50%, -50%);
+
+                    background-image: linear-gradient(45deg,
+                        rgba(158, 255, 0, 0),
+                        rgba(158, 255, 0, 1),
+                        rgba(158, 255, 0, 0)
+                    );
+                }
+                &::before{
+                    content: '';
+
+                    width: calc(1rem - 10px);
+                    height: 100%;
+                    
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 12;
+                    transform: translate(-50%, -50%);
+
+                    background-image: linear-gradient(45deg,
+                        rgba(158, 255, 0, 0),
+                        rgba(158, 255, 0, 1),
+                        rgba(158, 255, 0, 0)
+                    );
+                }
+            }
+        }
+    }
+}

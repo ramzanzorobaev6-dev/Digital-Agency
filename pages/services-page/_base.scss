@@ -1,0 +1,108 @@
+@use '../../global' as *;
+
+.services{
+        
+    // ====================================================================================
+    // БАЗОВЫЕ TRANSITION
+    // Отвечают за плавный возврат после hover/active.
+    // базовый transition используется для изменения свойств,
+    // если в состоянии :hover/:active не переопределена длительность для этого свойства.
+    // ====================================================================================
+
+    .header__button,
+    .header .navigation__link,
+    .cta__button,
+    .footer .navigation__link,
+    .footer .social__item,
+    .footer__copyright .contact,
+    .footer .contact__icon,
+    .footer .contact__text {
+        transition:
+            transform 0.4s ease,
+            background-color 0.4s ease,
+            box-shadow 0.4s ease,
+            color 0.4s ease,
+            border 0.4s ease;
+    }
+
+    // ============================================
+    // HOVER
+    // Только устройства, где есть настоящий hover
+    // ============================================
+
+    @media(hover: hover){
+        .header__button:hover{
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+
+            transform: translateY(-2px);
+    
+            background-color: $color-70-green;
+            box-shadow: 2px 2px 5px 1px $color-50-green;
+        }
+        .header .navigation__link:hover{
+            color: #98989a;
+        }
+        .cta__button:hover{
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+
+            transform: translateY(-2px);
+        
+            background-color: $color-70-green;
+            box-shadow: 2px 2px 5px 1px $color-50-green;
+        }
+        .footer .navigation__link:hover {
+            color: #98989a;
+        }
+        .footer .social__item:hover {
+            transition: transform 0.2s ease;
+
+            transform: scale(1.2);
+        }
+
+        .footer__copyright .contact:hover {
+
+            .footer .contact__icon {
+                color: #9EFF00;
+            }
+
+            .footer .contact__text {
+                color: $color-60-grey;
+            }
+        }
+    }
+
+    // ============================================
+    // ACTIVE
+    // Для всех устройств
+    // ============================================
+
+    .header__button:active,
+    .header .navigation__link:active,
+    .cta__button:active,
+    .footer .navigation__link:active,
+    .footer .social__item:active {
+
+        transition: transform 0.3s ease;
+
+        transform: scale(0.95);
+    }
+
+    .footer__contact:active {
+
+        .footer .contact__icon {
+            transition: transform 0.3s ease;
+
+            transform: scale(0.95);
+        }
+
+        .footer .contact__text {
+            color: $color-60-grey;
+        }
+    }
+}

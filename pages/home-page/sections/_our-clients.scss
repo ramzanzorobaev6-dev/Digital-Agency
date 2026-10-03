@@ -1,0 +1,113 @@
+@use '../core' as *;
+
+.home-page{
+    .our-clients{
+        @include header-section;
+    
+        border-inline: 1px solid $color-20-grey;
+    
+        &__header{
+            @include header-wrapper;
+
+            @include header-border;
+        }
+        &__heading{
+            @include header;
+    
+            &::before{
+                background-image: url(./pages/home-page/images/our-clients/bg-header.png);
+                background-position: left;
+            }
+        }
+    
+    }
+
+    .reviews{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &__item{
+            padding: 7.14rem 5.71rem;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2.85rem;
+        
+            @include border-card;
+
+            &:nth-child(2n - 1){
+                border-right: 1px solid $color-20-grey;
+            }
+        }
+        &__description{
+            display: flex;
+            flex-direction: column;
+            gap: 1.71rem;
+        }
+        &__title{
+            @include font(500, 2rem, $color-80-green)
+        }
+        &__text{
+            @include font(400, 1.28rem, $colorAbs-white)
+        }
+        
+        .author{
+            padding: 1.42rem;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            border-radius: 0.57rem;
+            @include dark-border;
+            background-color: rgb(36,36,36, 0.2);
+
+            &__description{
+                display: flex;
+                align-items: center;
+                gap: 1.42rem;
+            }
+
+            &__button{
+                @include font(500, 1.28rem,$colorAbs-white);
+                white-space: nowrap;
+                
+                padding: 1.28rem 1.42rem;
+                ;
+
+                border:  1px solid transparent;
+                border-radius: 0.714rem;
+                background-color: $color-15-grey;
+                
+                @include transition(all, 0.7s, ease);
+
+                cursor: pointer;
+                user-select: none;
+
+                &:hover{
+                    transform: translateY(-2px);
+
+                    background-color: $color-10-grey;
+                    @include dark-border; 
+                }
+                &:active{
+                    transform: scale(0.95);
+                    transition: transform 0.1s;
+                }
+            }
+            &__profile{
+                display: flex;
+                flex-direction: column;
+                gap: 0.14rem;
+        
+                &-title{
+                    @include font(500, 1.42rem, $colorAbs-white)
+                }
+                &-status{
+                    @include font(400, 1.28rem, $colorAbs-white)
+                }
+            }          
+        }
+    }
+}

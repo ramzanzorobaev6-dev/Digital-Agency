@@ -1,0 +1,313 @@
+@use '../../global' as *;
+
+@mixin text{
+    @include font(400, 1.28rem, $color-90-grey);
+}
+
+@mixin label-font{
+    @include font(500, 1.57rem, $colorAbs-white)
+}
+@mixin input-font{
+    @include font(400, 1.28rem, $color-40-grey);
+}
+
+
+@mixin service-section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    &__header{
+        padding: 3.57rem;
+        padding-top: 8.57rem;
+        ;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 3.57rem;
+    
+        @include border-grey;
+    }
+    &__heading{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }            
+    &__title{
+        @include font(600, 3.42rem, $colorAbs-white);
+    } 
+    &__text{
+        @include font(400, 1.28rem, $colorAbs-white);
+    }
+    &__caption{
+        @include font(400, 1.57rem, $colorAbs-white);
+
+        padding: 0.85rem 1rem;
+        ;
+
+        align-self: flex-start;
+
+        background-color: $color-15-grey;
+        border-radius: 8px;
+    }
+}
+
+@mixin service-catalog{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+    }
+    &__heading{
+        border-inline: 1px solid $color-20-grey;
+    }
+    &__header{
+        border-inline: 1px solid $color-20-grey;
+    }
+    &__title{
+       @include font(500, 2rem, $color-60-grey);
+            
+        margin-block: 3.57rem;
+        padding-left: 3.57rem;
+    }
+    &__cards{
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        &:not(:first-child){
+            border-bottom: 1px solid $color-20-grey;
+        }
+    }
+
+    @media(max-width: 1700px){
+        &__cards{
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+    @media(max-width: 768px){
+        &__cards{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media(max-width: 280px){
+        &__cards{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__title{
+            padding: 0;
+
+            text-align: center;
+        }
+    }
+}
+
+@mixin catalog-card{
+    padding: 3.57rem;
+    ;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.14rem;
+
+    border-top: 1px solid $color-20-grey;
+    border-right: 1px solid $color-20-grey;
+
+    &:first-child{
+        border-left: 1px solid $color-20-grey;
+    }
+
+    &__icon-wrapper{
+        padding: calc(2rem - 5px);
+
+        position: relative;
+
+        align-self: flex-start;
+
+        background-color: $color-10-grey;
+        border-radius: 1rem;
+        @include border-grey;
+
+        overflow: hidden;
+
+        &::after{
+            content: "";
+            
+            position: absolute;
+            bottom: 2.8rem;
+            right: 2.8rem;
+            
+            height: 250%;
+            width: 250%;
+            
+            background-image: radial-gradient(
+                circle at 0% 0%, 
+                rgba(158, 255, 0, 0.2) 65%, 
+                transparent 90%
+            );
+            pointer-events: none;     
+        }
+    }
+    &__icon{
+        width: 2.85rem;
+        height: 2.85rem;
+    }      
+    &__text{
+        @include font(500, 1.42rem, $color-90-grey);
+    }
+}
+
+@mixin catalog-card-media($selector){
+
+    @media (max-width:1700px){
+
+        #{$selector}:last-child{
+            grid-column:1 / -1;
+            align-items:center;
+
+            border-left: 1px solid $color-20-grey;
+        }
+
+        #{$selector}:last-child #{$selector}__icon-wrapper{
+            align-self:center;
+        }
+    }
+
+    @media (max-width:768px){
+
+        #{$selector}:last-child{
+            grid-column:2 / -1;
+            align-items:flex-start;
+
+            border-left-color: transparent;
+        }
+
+        #{$selector}:last-child #{$selector}__icon-wrapper{
+            align-self:flex-start;
+        }
+
+        #{$selector}:nth-child(2n - 1){
+            border-left: 1px solid $color-20-grey;
+        }
+    }
+
+    @media (max-width:280px){
+
+        #{$selector}__icon-wrapper{
+            align-self:center;
+        }
+
+        #{$selector}__text{
+            text-align:center;
+        }
+
+        #{$selector}:last-child #{$selector}__icon-wrapper{
+            align-self:center;
+        }
+
+        #{$selector}:last-child{
+            grid-column:1 / -1;
+        }
+
+         #{$selector}:nth-child(2n){
+            border-left: 1px solid $color-20-grey;
+        }
+    }
+}
+
+
+//header в секциях с фоном
+@mixin hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &__title{
+        @include font(600, 3.42rem, $colorAbs-white);
+        text-align: center;
+    }
+    &__text{
+        @include font(400, 1.17rem, $color-90-grey);
+        text-align: center;
+        
+        max-width: 1000px;
+    }
+}
+@mixin hero-header{
+    position: relative;
+
+    &::after{
+        content: '';
+        
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        opacity: 0.6;
+        
+        background-image: url('/pages/works-page/images/components/unique-header-block.png');
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: right;
+    }
+}
+@mixin hero-description{
+    position: relative;
+
+    padding-block: 8.57rem;
+    padding-inline: 4.28rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    &::after{
+        content: '';
+        
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        background-color: #acff24;
+
+        opacity: 0.2;
+    }
+    &::before{
+        content: '';
+        
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        
+        background-image: url('/pages/services-page/images/components/bg-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

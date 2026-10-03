@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact">
+    <header class="header section">
+        <a href="#">
+            <img src="./global/images/icons/logo/logo.svg" alt="logo-image" class="header__logo" decoding="async">
+        </a>
+        <!-- Чекбокс -->
+        <input type="checkbox" id="burger-toggle" class="header__toggle" hidden>
+        <!-- Бургер -->
+        <div class="header__burger-wrapper">
+            <label for="burger-toggle" class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <!-- Оверлей -->
+        <label for="burger-toggle" class="header__overlay"></label>
+
+        <nav class="navigation header__nav" role="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="./index.html" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./services.html" class="navigation__link">Services</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./works.html" class="navigation__link">Work</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./process.html" class="navigation__link">Process</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./about.html" class="navigation__link">About</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./careers.html" class="navigation__link">Careers</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="./contact.html" class="header__button">Contact us</a>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__header">
+                <hgroup class="hero__description">
+                    <h1 class="hero__title">Contact Us</h1>
+                    <p class="hero__text">Get in touch with us today and let us help you with any questions or inquiries you may have.</p>
+                </hgroup>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="contacts__buttons">
+                <a class="contacts__button" href="#">
+                    <svg class="contacts__icon">
+                        <use href="./global/images/icons/sprite.svg#mail"></use>
+                    </svg>
+                    <span class="contacts__text">hello@squareup.com</span>
+                </a>
+                <a class="contacts__button" href="#">
+                    <svg class="contacts__icon">
+                        <use href="./global/images/icons/sprite.svg#phone"></use>
+                    </svg>
+                    <span class="contacts__text">+91 91813 23 2309</span>
+                </a>
+                <a class="contacts__button" href="#">
+                    <svg class="contacts__icon">
+                        <use href="./global/images/icons/sprite.svg#location"></use>
+                    </svg>
+                    <span class="contacts__text">Somewhere in the World</span>
+                </a>
+            </div>
+            <div class="feedback contacts__feedback">
+                <div class="feedback__wrapper"><!--Cоздал обёртку для формы чтобы не искажать элементы, скрыть форму через стили, а расстовлять через обёртку-->
+                    <form class="feedback__form">
+                        <fieldset class="feedback__fieldset">
+                            <legend class="feedback__legend">Personal Data</legend>
+
+                            <div class="feedback__field">
+                                <label for="name" class="feedback__label">Full Name</label>
+                                <input id="name" type="text" placeholder="Type here" class="feedback__input">
+                            </div>
+
+                            <div class="feedback__field">
+                                <label for="email" class="feedback__label">Email</label>
+                                <input id="email" type="email" placeholder="Type here" class="feedback__input">
+                            </div>
+
+                        </fieldset>
+                        <div class="checkbox feedback__checkbox">
+                            <fieldset class="checkbox__fieldset">
+                                <legend class="checkbox__legend">Why are you contacting us?</legend>
+                                <div class="checkbox__container">
+
+                                    <div class="checkbox__column">
+                                        <div class="checkbox__card">
+                                            <label for="web-design" class="checkbox__label">
+                                                <span class="checkbox__title">Web Design</span>
+                                                <input id="web-design" type="checkbox" class="checkbox__input" hidden>
+                                                <span class="checkbox__icon-wrapper">
+                                                    <img src="./pages/home-page/icons/interest/checked.svg" alt="cheked" class="checkbox__icon-checked" loading="lazy" decoding="async">
+                                                    <img src="./pages/home-page/icons/interest/uncheked.svg" alt="uncheked" class="checkbox__icon-unchecked" loading="lazy" decoding="async">
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__card">
+                                            <label for="mobile-app-design" class="checkbox__label">
+                                                <span class="checkbox__title">Mobile App Design</span>
+                                                <input id="mobile-app-design" type="checkbox" class="checkbox__input" hidden>
+                                                 <span class="checkbox__icon-wrapper">
+                                                    <img src="./pages/home-page/icons/interest/checked.svg" alt="cheked" class="checkbox__icon-checked" loading="lazy" decoding="async">
+                                                    <img src="./pages/home-page/icons/interest/uncheked.svg" alt="uncheked" class="checkbox__icon-unchecked" loading="lazy" decoding="async">
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox__column">
+                                        <div class="checkbox__card">
+                                            <label for="collaboration" class="checkbox__label">
+                                                <span class="checkbox__title">Collaboration</span>
+                                                <input id="collaboration" type="checkbox" class="checkbox__input" hidden>
+                                                 <span class="checkbox__icon-wrapper">
+                                                    <img src="./pages/home-page/icons/interest/checked.svg" alt="cheked" class="checkbox__icon-checked" loading="lazy" decoding="async">
+                                                    <img src="./pages/home-page/icons/interest/uncheked.svg" alt="uncheked" class="checkbox__icon-unchecked" loading="lazy" decoding="async">
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox__card">
+                                            <label for="others" class="checkbox__label">
+                                                <span class="checkbox__title">Others</span>
+                                                <input id="others" type="checkbox" class="checkbox__input" hidden>
+                                                 <span class="checkbox__icon-wrapper">
+                                                    <img src="./pages/home-page/icons/interest/checked.svg" alt="cheked" class="checkbox__icon-checked" loading="lazy" decoding="async">
+                                                    <img src="./pages/home-page/icons/interest/uncheked.svg" alt="uncheked" class="checkbox__icon-unchecked" loading="lazy" decoding="async">
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="range feedback__range">
+                            <fieldset class="range__fieldset">
+                                <legend class="range__description">
+                                    <h3 class="range__title">Your Budget</h3>
+                                    <p class="range__text">Slide to indicate your budget range</p>
+                                </legend>
+                            </fieldset>
+                            <div class="range-slider range__slider">
+                                <div class="range-slider__track">
+                                    <div class="range-slider__fill"></div>
+                                    <input type="range" class="range-slider__input range-slider__input--min" min="0" max="10000" step="100" value="1000">
+                                    <input type="range" class="range-slider__input range-slider__input--max" min="0" max="10000" step="100" value="5000">
+                                </div>
+                                <div class="range-slider__labels">
+                                    <span class="range-slider__value range-slider__value--min">$1,000</span>
+                                    <span class="range-slider__value range-slider__value--max">$5,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="textarea feedback__textarea">
+                            <fieldset class="textarea__fieldset">
+                                <legend class="textarea__explanation">Your Message</legend>
+                                <textarea class="textarea__input" rows="2" placeholder="Type here"></textarea>
+                            </fieldset>
+                        </div>
+                        <button class="feedback__button" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="contacts__info">
+                <div class="working-days">
+                    <h3 class="working-days__title">Operating Days</h3>
+                    <p class="working-days__text">Monday to Friday</p>
+                </div>
+                <div class="contacts__socials-wrapper">
+                    <div class="social contacts__socials">
+                        <h3 class="social__title">Stay Connected</h3>
+                        <div class="social__list">
+                            <button class="social__item" type="button" aria-label="connect to facebook">
+                                <svg class="social__icon">
+                                    <use href="./global/images/icons/sprite.svg#facebook"></use>
+                                </svg>
+                            </button>
+                            <button class="social__item" type="button" aria-label="connect to twitter">
+                                <svg class="social__icon">
+                                    <use href="./global/images/icons/sprite.svg#twitter"></use>
+                                </svg>
+                            </button>
+                            <button class="social__item" type="button" aria-label="connect to linkedin">
+                                <svg class="social__icon">
+                                    <use href="./global/images/icons/sprite.svg#linkedin"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="questions">
+            <div class="questions__header">
+                <header class="questions__heading">
+                    <h2 class="questions__title">Frequently Asked Questions</h2>
+                    <p class="questions__text">Still you have any questions? Contact our Team via hello@squareup.com</p>
+                </header>
+            </div>
+            <div class="faq">
+                <div class="faq__columns">
+                    <!-- Колонка 1 -->
+                    <div class="faq__column">
+                        <details open>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">01</span>
+                                </div>
+                                <span class="faq__title">What services does SquareUp provide?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">02</span>
+                                </div>
+                                <span class="faq__title">How can SquareUp help my business?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">03</span>
+                                </div>
+                                <span class="faq__title">What industries does SquareUp work with?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                        <details>
+                            <summary> 
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">04</span>
+                                </div>
+                                <span class="faq__title">How long does it take to complete a project with SquareUp?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                    </div>
+                    <!-- Колонка 2 -->
+                    <div class="faq__column">
+                        <details>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">05</span>
+                                </div>
+                                <span class="faq__title">Do you offer ongoing support and maintenance after the project is completed?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">06</span>
+                                </div>
+                                <span class="faq__title">Can you work with existing design or development frameworks?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">07</span>
+                                </div>
+                                <span class="faq__title">How involved will I be in the project development process?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                        <details>
+                            <summary>
+                                <div class="faq__number-wrapper">
+                                    <span class="faq__number">08</span>
+                                </div>
+                                <span class="faq__title">Can you help with website or app maintenance and updates?</span>
+                            </summary>
+                            <p>SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="today">
+            <div class="today__header">
+                <img src="./pages/about-page/icons/logo.svg" alt="logo-icon" class="today__logo" decoding="async">
+                <hgroup class="today__heading">
+                    <h2 class="today__title">Today, SquareUp Continues to Thrive as a Leading Digital Product Agency.....</h2>
+                    <p class="today__text">Combining the power of design, engineering, and project management to create transformative digital experiences. They invite you to join them on their journey and discover how they can help bring your digital ideas to life.</p>
+                </hgroup>
+            </div>
+            <div class="company-state today__content">
+                <div class="company-state__description">
+                    <h3 class="company-state__caption">Welcome to SquareUp</h3>
+                    <p class="company-state__text">Where collaboration, Expertise, and Client-Centricity Intersect to Shape the Future of Digital Innovation.</p>
+                </div>
+                <button class="company-state__button" type="button">Start Project</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__main">
+            <img src="./global/images/icons/logo/logo.svg" alt="Digital-Agency logo" class="footer__logo" decoding="async">
+            <nav class="navigation footer__navigation" role="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="./index.html" class="navigation__link">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="./services.html" class="navigation__link">Services</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="./works.html" class="navigation__link">Work</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="./process.html" class="navigation__link">Process</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="./about.html" class="navigation__link">About</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="./careers.html" class="navigation__link">Careers</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="social footer__social">
+                <h3 class="social__title">Stay Connected</h3>
+                <div class="social__list">
+                    <button class="social__item" type="button" aria-label="connect to facebook">
+                        <svg class="social__icon">
+                            <use href="./global/images/icons/sprite.svg#facebook"></use>
+                        </svg>
+                    </button>
+                    <button class="social__item" type="button" aria-label="connect to twitter">
+                        <svg class="social__icon">
+                            <use href="./global/images/icons/sprite.svg#twitter"></use>
+                        </svg>
+                    </button>
+                    <button class="social__item" type="button" aria-label="connect to linkedin">
+                        <svg class="social__icon">
+                            <use href="./global/images/icons/sprite.svg#linkedin"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="footer__copyright">
+            <div class="footer__contacts">
+                <a class="contact footer__contact" href="#">
+                    <svg class="contact__icon">
+                        <use href="./global/images/icons/sprite.svg#mail"></use>
+                    </svg>
+                    <span class="contact__text">hello@squareup.com</span>
+                </a>
+                <a class="contact footer__contact" href="#">
+                    <svg class="contact__icon">
+                        <use href="./global/images/icons/sprite.svg#phone"></use>
+                    </svg>
+                    <span class="contact__text">+91 91813 23 2309</span>
+                </a>
+                <a class="contact footer__contact" href="#">
+                    <svg class="contact__icon">
+                        <use href="./global/images/icons/sprite.svg#location"></use>
+                    </svg>
+                    <span class="contact__text">Somewhere in the World</span>
+                </a>
+            </div>
+            <strong class="footer__license">© 2023 SquareUp. All rights reserved.</strong>
+        </section>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@use '../core' as *;
+
+.works{
+    .examples{
+        @include works-section;
+
+        .our-projects{
+            @include our-projects;
+
+            .illustration{
+                @include illustration
+            }
+        }
+    }
+}

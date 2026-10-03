@@ -1,0 +1,119 @@
+@use '../../global' as *;
+
+// @mixin illustration{
+//     display: flex;
+//     flex-direction: column;
+//     gap: 2.85rem;
+
+    
+//     &__icon-wrapper{
+//         @include gradient-bg-border;//фон, границы в обёртке
+//     }
+//     &__icon{
+//         margin: 0.85rem;//Меняем padding на margin так как внутри обертки нужно обеспечить размер место для видимости содержимого. Пишем размер paddingа в 2 раза меньше
+//         ;
+
+//         width: 2.85rem;
+//         height: 2.85rem;   
+        
+//     }
+//     &__title{
+//         @include font(600, 2.14rem, $colorAbs-white)
+//     }
+// }
+
+@mixin text{
+    @include font(400, 1.28rem, $color-90-grey);
+}
+
+@mixin label-font{
+    @include font(500, 1.57rem, $colorAbs-white)
+}
+@mixin input-font{
+    @include font(400, 1.28rem, $color-40-grey);
+}
+
+//header в секциях с фоном
+@mixin hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &__title{
+        @include font(600, 3.42rem, $colorAbs-white);
+        text-align: center;
+    }
+    &__text{
+        @include font(400, 1.17rem, $color-90-grey);
+        text-align: center;
+        
+        max-width: 1000px;
+    }
+}
+@mixin hero-header{
+    position: relative;
+
+    &::after{
+        content: '';
+        
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        opacity: 0.6;
+        
+        background-image: url('/pages/works-page/images/components/unique-header-block.png');
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: right;
+    }
+}
+@mixin hero-description{
+    position: relative;
+
+    padding-block: 8.57rem;
+    padding-inline: 4.28rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    
+    &::after{
+        content: '';
+        
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+        
+        background-color: #acff24;
+
+        opacity: 0.2;
+    }
+    &::before{
+        content: '';
+        
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        
+        background-image: url('/pages/contact-page/images/unique-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

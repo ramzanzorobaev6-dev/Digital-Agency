@@ -1,0 +1,17 @@
+@use '../core' as *;
+
+.services{    
+    .management{
+        @include service-section;
+
+        &-catalog{
+            @include service-catalog;
+        }
+
+        .catalog-card{
+            @include catalog-card;
+        }
+
+        @include catalog-card-media(".catalog-card");
+    }
+}

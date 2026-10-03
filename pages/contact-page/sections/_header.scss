@@ -1,0 +1,120 @@
+@use '../core' as *;
+
+.contact{
+    
+    .header{
+        max-width: none;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 3.57rem;
+    
+        border-bottom: 1px solid $color-15-grey;
+        &__logo{
+            margin: auto;
+    
+            width: 180px;
+            height: 60px;
+        }
+    
+        &__button{
+            @include green-button
+        }
+    
+        // Бургер-иконка (скрыта на десктопе)
+        &__burger {
+            padding: 6px 4px;
+            width: 20px;
+            height: auto;
+            min-height: 15px;
+    
+            display: none;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 2px;
+    
+            position: relative;
+            z-index: 20;
+    
+            border-radius: 5px;
+            background-color: $color-15-grey;
+    
+            cursor: pointer;
+        }
+        &__burger-wrapper{
+            padding: 4px;
+            ;
+            
+            display: none;
+
+            border-radius: 5px;
+            background-color: $color-15-grey;
+        }
+        &__burger span {
+            width: 100%;
+            height: 2px;
+    
+            border-radius: 5px;
+            background-color: $color-80-green;
+    
+            &:last-of-type{
+                width: 50%;
+        
+                justify-self: end;
+            }
+        }
+        // Оверлей (затемнение)
+        &__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 20;
+        }
+        // Чекбокс (скрытый)
+        &__toggle {
+            display: none;
+        }
+    }
+
+    .navigation {//Компонент навигация
+
+        &__list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 3.57rem;
+            row-gap: 2.14rem;
+        }
+        &__link{
+            @include font(600, 1.28rem, $colorAbs-white);
+            @include transition(all, 0.5s, ease);
+  
+            cursor: pointer;
+            user-select: none;
+  
+            &.active{
+                padding: 0.7rem 1.42rem;
+                ;
+  
+                border-radius: 10px;
+                background-color: $color-15-grey;
+            }
+  
+            &:hover{
+                color: $color-60-grey;
+            }
+            &:active{
+                transform: scale(0.95);
+                transition: transform 0.1s;
+            }
+        }
+    }
+}

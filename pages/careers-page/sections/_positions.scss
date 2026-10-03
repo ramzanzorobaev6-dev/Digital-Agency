@@ -1,0 +1,16 @@
+@use '../core' as *;
+
+.careers{
+    .positions{
+        @include positions;
+
+        .vacancies{
+            @include vacancies;
+
+            .illustration{
+                @include illustration;
+            }
+        }
+        @include vacancies-media('.vacancies');
+    }
+}

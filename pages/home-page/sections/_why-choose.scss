@@ -1,0 +1,53 @@
+@use '../core' as *;
+
+.home-page{
+    .why-choose{
+        @include header-section;
+    
+        border-inline: 1px solid $color-20-grey;
+    
+        &__header{
+            @include header-wrapper;
+
+            @include header-border;
+        }
+        &__heading{
+            @include header;
+    
+            &::before{
+                background-image: url(./pages/home-page/images/why-choose/bg-header.png);
+                background-position: left;
+            }
+        }
+
+        .benefits { // Компонент
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            &__card{
+                padding: 5.71rem;
+            
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 7.14rem;
+                
+                @include border-card;
+
+                &:nth-child(2n - 1) {
+                    border-right: 1px solid $color-20-grey;
+                }
+            }
+            &__card-text{
+                @include text;
+            }
+
+            .illustration{
+                @include illustration;
+        
+                flex-direction: row;
+                align-items: center
+            }
+        }
+    }
+}

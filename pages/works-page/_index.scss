@@ -1,0 +1,17 @@
+@use 'core' as *;
+
+//Подключение секций
+
+@use 'sections/header';
+
+@use 'sections/main';
+
+@use 'sections/hero';
+
+@use 'sections/examples';
+
+@use 'sections/cta';
+
+@use 'sections/footer';
+
+@use 'media';

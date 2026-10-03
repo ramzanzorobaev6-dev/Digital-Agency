@@ -1,0 +1,11 @@
+@use '../core' as *;
+
+.home-page{
+    .main{
+        padding-inline: 5.71rem;
+        margin-inline: auto;
+    
+        display: flex;
+        flex-direction: column;
+    }
+}

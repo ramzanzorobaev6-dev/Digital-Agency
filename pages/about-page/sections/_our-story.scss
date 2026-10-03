@@ -1,0 +1,11 @@
+@use '../core' as *;
+
+.about{
+    .our-story{
+        @include our-story-section;
+        
+        .growth-phases{
+            @include growth-phases;
+        }
+    }
+}

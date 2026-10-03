@@ -1,0 +1,118 @@
+@use '../core' as *;
+
+.home-page{
+    .questions{
+        @include header-section;
+    
+        border-inline: 1px solid $color-20-grey;
+    
+        &__header{
+            @include header-wrapper;
+
+            @include header-border;
+        }
+        &__heading{
+            @include header;
+    
+            &::before{
+                background-image: url(./pages/home-page/images/questions/bg-header.png);
+                background-position: left;
+            }
+        }
+    }
+    .faq{ // Компонент Аккордеон
+        &__columns {
+            padding-block: 1rem;
+            width: 100%;
+    
+            display: flex;
+            gap: 2.85rem;
+        }    
+        &__column {
+            padding-inline: 2rem;
+    
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 1.42rem;
+        }
+        &__number-wrapper{
+            @include gradient-bg-border;
+        }
+        &__number{
+            @include font(500, 2rem, $colorAbs-white);
+            min-width: 2rem;
+            margin: 0.71rem;
+            ;
+            
+            display: block;
+            flex-shrink: 0;
+        }
+        &__title{
+            @include font(500, 1.28rem, $colorAbs-white);
+            padding-right: 2.42rem;
+        }
+    
+        details {
+            padding: 2.42rem 3.57rem;
+            padding-right: 6rem;
+    
+            user-select: none;
+            
+            @include dark-border;
+    
+            @include transition(all, 0.5s, ease)
+        }
+        
+        details summary {
+            position: relative;
+    
+            display: flex;
+            align-items: center;
+            gap: 2.14rem;
+    
+            cursor: pointer;
+            list-style: none;
+    
+            &::after{
+                content: '+';
+                font-size: 2.5rem;
+                font-weight: 900;
+                
+                color: $colorAbs-white;
+    
+                position: absolute;
+                top: 8px;
+                right: -2.42rem;
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                width: 2.42rem;
+                height: 2.42rem;
+    
+                @include transition(all, 0.5s, ease)
+            }
+        }
+    
+        details p {
+            @include font(400, 1.17rem, $colorAbs-white);
+            padding-top: 1rem;
+            padding-left: calc(2rem + 2.5rem + 1.2rem);
+        }
+    
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    
+        details[open] .faq__number, details[open] .faq__title {
+            color: $color-80-green;
+        }
+    
+        details[open] summary::after{
+            transform: rotate(45deg);
+            color: $color-80-green;
+        }
+    }  
+}

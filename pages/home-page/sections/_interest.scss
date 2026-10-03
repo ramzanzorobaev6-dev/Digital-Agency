@@ -1,0 +1,452 @@
+@use '../core' as *;
+
+.home-page{
+    .interest{
+        @include header-section;
+    
+        border-inline: 1px solid $color-20-grey;
+    
+        &__header{
+            @include header-wrapper;
+
+            @include header-border;
+            
+            &::after{
+                pointer-events: none;
+            }
+        }
+        &__heading{
+            position: relative;
+    
+            padding-block: 8.57rem;
+            padding-inline: 4.28rem;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3.57rem;
+    
+            background-color: rgba(0, 0, 0, 0.8);
+        
+            &::after{
+                content: '';
+            
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+            
+                width: 100%;
+                height: 100%;
+            
+                background-color: #acff24;
+    
+                opacity: 0.2;
+            }
+    
+            &::before{
+                content: '';
+            
+                position: absolute;
+                z-index: -2;
+                top: 0;
+                left: 0;
+    
+                width: 100%;
+                height: 100%;
+            
+                background-image: url(./pages/home-page/images/interest/header-bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: left;
+            }   
+        }
+        &__logo{
+            width: 5.714rem;
+            height: 5.714rem;
+        }
+        &__description{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        &__title{
+            @include font(600, 3.42rem, $colorAbs-white);
+            text-align: center;
+        }
+        &__text{
+            @include font(400, 1.17rem, $color-90-grey);
+            text-align: center;
+            max-width: 1000px;
+        }
+        &__button{
+            @include green-button;
+            @include transition(all, 0.5s, ease);
+
+            cursor: pointer;
+            user-select: none;
+    
+            &:hover{
+                transform: translateY(-2px);
+
+                background-color: $color-70-green;
+                box-shadow: 2px 2px 5px 1px $color-50-green;
+            }
+    
+            &:active{
+                transform: scale(0.95);
+                transition: transform 0.1s;
+            }
+        }
+    }
+    .interest .feedback{ //Компонент формы
+        width: 100%;
+    
+        display: flex;
+        justify-content: center;
+        
+        &__form{
+            display: contents;
+            
+        }//Cоздал обёртку для формы чтобы не искажать элементы, скрыть форму через стили, а расстовлять через обёртку
+        &__wrapper{
+            padding: 5.714rem;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.85rem;
+            
+            border-inline: 1px solid $color-20-grey;
+        }
+        &__button{
+            @include green-button;
+        }
+    }
+    .interest .feedback{
+        &__fieldset{
+            width: 100%;
+        
+            display: flex;
+            justify-content: center;
+            gap: 2.85rem;
+        
+            border: none;
+        }
+        &__legend{
+            display: none;
+        }
+    
+        &__field{
+            padding: 1.714rem 2.85rem;
+            ;
+            width: 100%;
+    
+            display: flex;
+            flex-direction: column;
+            gap: 1.42rem;
+    
+            border-radius: 0.57rem;
+            @include border-grey;
+            background-color: rgba(36, 36, 36, 0.5);
+        }
+        &__label{
+            @include label-font;
+        }
+
+        &__input{
+            @include input-font;
+
+            padding-right: 0.35rem;
+
+            border: none;
+            border-bottom: 2px solid $color-20-grey;
+            background-color: transparent;
+
+            &:focus-visible{
+                outline: 2px solid $color-50-green;
+                outline-offset: 2px;
+            }
+        }
+    }
+    .interest .checkbox{
+            padding: 1.714rem;
+            ;
+            width: 100%;
+            
+            border-radius: 0.57rem;
+            @include border-grey;
+            background-color: rgba(36, 36, 36, 0.5);
+
+        &__fieldset{//Это наружняя обертка, я записал ее внутри чтобы не создавать отдельный глобальный класс
+            padding: 1.714rem;
+            ;
+            width: 100%;
+        
+            display: flex;
+            flex-direction: column;
+            gap: 1.42rem;
+            
+            border: none;
+        }
+    
+        &__legend{
+            @include label-font;
+    
+            white-space: normal;
+            word-wrap: break-word;
+            max-width: 100%;
+            
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            gap: 1.42rem;
+        }
+        &__column{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+    }
+    .interest .checkbox{
+        &__card{
+            padding: 0.714rem;
+            width: 100%;
+        }
+        &__label{
+            display: flex;
+            flex-direction: row-reverse; 
+            justify-content: flex-end; 
+            align-items: center;
+            gap: 1rem;
+            
+            cursor: pointer;
+            user-select: none;
+
+        }
+        &__title{
+            @include input-font;
+            color: $colorAbs-white;
+        }
+        &-icon{
+            width: 1.714rem;
+            height: 1.714rem;
+        }
+    }
+    //Изменение тконки чекбокса
+    .checkbox__icon-unchecked {
+        width: 2rem;
+        height: 2rem;
+    
+        display: block;
+    }
+    .checkbox__icon-checked {
+        width: 2rem;
+        height: 2rem;
+    
+        display: none;
+    }
+    .checkbox__input:checked 
+    ~ .checkbox__icon-wrapper 
+    .checkbox__icon-unchecked {
+        display: none;
+    }
+    .checkbox__input:checked 
+    ~ .checkbox__icon-wrapper 
+    .checkbox__icon-checked {
+        display: block;
+    }
+
+    .interest .range{
+            padding: 1.714rem;
+            ;
+            width: 100%;
+    
+            display: flex;
+            flex-direction: column;
+            gap: 2.85rem;
+            
+            border-radius: 0.57rem;
+            @include border-grey;
+            background-color: rgba(36, 36, 36, 0.5);
+
+        &__fieldset{
+            display: contents;
+        }
+        &__description{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        &__title{
+            @include label-font;
+        }
+        &__text{
+            @include input-font;
+            color: $colorAbs-white;
+        }
+        &-slider {
+            position: relative;
+            width: 100%;
+    
+        
+            &__track {
+                position: relative;
+    
+                height: 0.42rem;
+                margin-bottom: 1.5rem;
+    
+                background: $color-20-grey;
+                border-radius: 0.28rem;
+            }
+        
+            &__fill {
+                position: absolute;
+                
+                height: 100%;
+                
+                background: $color-50-green;
+                border-radius: 0.28rem;
+                
+                pointer-events: none;
+            }
+        
+            &__input {
+                position: absolute;
+                
+                width: 100%;
+                height: 100%;
+                
+                -webkit-appearance: none;
+                appearance: none;
+                
+                background: transparent;
+                
+                pointer-events: none;
+        
+                &::-webkit-slider-thumb {
+                    pointer-events: auto;
+                     
+                    width: 1.14rem;
+                    height: 1.14rem;
+                    
+                    -webkit-appearance: none;
+                    appearance: none;
+                    
+                    border-radius: 50%;
+                    background: $color-50-green;
+                    outline: 0.57rem solid $color-30-grey;
+                    box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.3);
+                    
+                    cursor: pointer;
+                }
+        
+                &::-moz-range-thumb {
+                    pointer-events: auto;
+                    
+                    width: 1.14rem;
+                    height: 1.14rem;
+                   
+                    border-radius: 50%;
+                    background: $color-50-green;
+                    outline:  0.35rem solid $color-30-grey;
+                   
+                    cursor: pointer;
+                }
+            }
+            
+            &__labels {
+                position: relative;
+                width: 100%;
+                height: 1.5rem;
+                // display: flex;
+                // justify-content: space-between;
+                // margin-top: 0.5rem;
+                
+                .range-slider__value--min {
+                    left: 0; 
+                }
+        
+                .range-slider__value--max {
+                    left: 0; 
+                }
+            }
+        
+            &__value {
+                transform: translateX(-50%);
+                
+                position: absolute;
+                top: 0;
+                
+                @include font(400, 1rem, $colorAbs-white);
+            }
+        }
+    }
+    .interest .textarea{
+            padding: 1.714rem 2.85rem;
+            ;
+            width: 100%;
+    
+            display: flex;
+            flex-direction: column;
+            gap: 1.42rem;
+        
+            border-radius: 0.57rem;
+            @include border-grey;
+            background-color: rgba(36, 36, 36, 0.5);
+
+        &__fieldset{
+            border: none;
+        }
+        &__explanation{
+            @include label-font;
+    
+            margin-bottom: 1.42rem;
+        }
+        &__input{
+            width: 100%;
+            min-height: 3.6rem;
+            max-height: 15rem;
+    
+            @include input-font;
+            font-size: 1.28rem;
+            color: $colorAbs-white;
+    
+            
+            line-height: 1.8rem; /* Высота строки = расстояние между линиями */
+    
+            /* Линии ТОЛЬКО под строками (смещаем вниз) */
+            background-image: repeating-linear-gradient(
+                to bottom,
+                transparent 0,
+                transparent 1.75rem,
+                $color-20-grey 1.75rem,
+                $color-20-grey 1.8rem
+            );
+            background-size: 100% 1.8rem;
+            background-position: 0 0;
+            background-attachment: local;
+            background-repeat: repeat-y;
+            
+            background-color: transparent;
+            border: none;
+            
+            resize: vertical;
+    
+            &:focus {
+                outline: none;
+            }
+
+            &::-webkit-resizer {
+                display: none;
+            }
+    
+            &::placeholder{
+                @include input-font;
+            }
+        }
+    }
+}

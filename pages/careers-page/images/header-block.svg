@@ -1,0 +1,27 @@
+<svg width="649" height="571" viewBox="0 0 649 571" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_443_2)">
+<rect width="649" height="571" rx="16" fill="url(#pattern0_443_2)" fill-opacity="0.6"/>
+<g filter="url(#filter0_f_443_2)" style="mix-blend-mode:luminosity">
+<path d="M-48 571.5C-48 642.469 -105.531 700 -176.5 700C-247.469 700 -305 642.469 -305 571.5C-305 500.531 -247.469 443 -176.5 443C-105.531 443 -48 500.531 -48 571.5Z" fill="url(#paint0_radial_443_2)" fill-opacity="0.8"/>
+</g>
+</g>
+<rect x="0.5" y="0.5" width="648" height="570" rx="15.5" stroke="#262626"/>
+<defs>
+<pattern id="pattern0_443_2" patternContentUnits="objectBoundingBox" width="0.0493066" height="0.056042">
+<use xlink:href="#image0_443_2" transform="scale(0.00154083 0.00175131)"/>
+</pattern>
+<filter id="filter0_f_443_2" x="-522" y="226" width="691" height="691" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="108.5" result="effect1_foregroundBlur_443_2"/>
+</filter>
+<radialGradient id="paint0_radial_443_2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(324.5 278.5) rotate(90) scale(128.5)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_443_2">
+<rect width="649" height="571" rx="16" fill="white"/>
+</clipPath>
+<image id="image0_443_2" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA5klEQVR42u1WMQ7CMBA7KQNbt27Z2DpmY+MRuY2NrS/Kc4mlng5FIGE6AOIsWbfU7jWtaktHuWcSOfW5yItIImfpGtNtswgBu+GxM2OCqnoh9Bk0D0qfzGAgDEj9zOkdxTd3I+0g9KYDJ0zuBHyByUxgwCww6PO7r2A2Egss0BrpBQBc/IBK6LXWet24mof8NVprBwkEAj8Oz3vrCUYy74tAN5DuC2zejw8wdI5MpyXZF/xP+KRvIDeII9xVOMqYmDvi2iP7gwu4Af0NeWOCXqm+gHeGCVr+79FjRmxG44kKFSfzFbgB2H9a/oMniUIAAAAASUVORK5CYII="/>
+</defs>
+</svg>

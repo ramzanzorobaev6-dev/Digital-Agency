@@ -1,0 +1,23 @@
+@use 'core' as *;
+
+//Подключение секций
+
+@use 'sections/header';
+
+@use 'sections/main';
+
+@use 'sections/hero';
+
+@use 'sections/services';
+
+@use 'sections/why-choose';
+
+@use 'sections/our-clients';
+
+@use 'sections/questions';
+
+@use 'sections/interest';
+
+@use 'sections/footer';
+
+@use 'media';
