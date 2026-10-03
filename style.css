@@ -2308,7 +2308,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/services-page/images/components/bg-header.png");
+  background-image: url("./pages/services-page/images/components/bg-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3531,7 +3531,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/works-page/images/components/unique-header.png");
+  background-image: url("./pages/works-page/images/components/unique-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -4415,7 +4415,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/process-page/images/components/unique-header.png");
+  background-image: url("./pages/process-page/images/components/unique-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -5585,7 +5585,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/about-page/images/unique-header.png");
+  background-image: url("./pages/about-page/images/unique-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -6572,7 +6572,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/works-page/images/components/unique-header.png");
+  background-image: url("./pages/works-page/images/components/unique-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -7561,7 +7561,7 @@ h1, h2, h3, h4, h5, h6, p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/pages/contact-page/images/unique-header.png");
+  background-image: url("./pages/contact-page/images/unique-header.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
