@@ -139,7 +139,7 @@ Implemented practices include:
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://ramzanzorobaev6-dev.github.io/Digital-Agency/
 ```
 
 Open the project in your code editor and run it using a local development server.
