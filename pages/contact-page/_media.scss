@@ -193,10 +193,10 @@
         .header__burger {
             display: grid; // показываем бургер
             align-items: center;
-            gap: 3px;
+            gap: 4px;
         }
         .header__burger span{
-            height: 1.5px;
+            height: 1.6px;
         }
         .header__burger-wrapper{
             display: flex;
@@ -242,13 +242,6 @@
         .hero__content-card{
             border: none;
         }
-        // .contacts__buttons{
-        //     flex-direction: column;
-        // }
-        // .contacts__button{
-        //     max-width: 25rem;
-        //     width: 100%;
-        // }
     }
 }
 @media(max-width: 300px){
@@ -264,24 +257,25 @@
 @media(max-width: 270px){
     .contact{
         .header__logo{
-            width: 8.57rem;
-            height: 2.85rem;
+            width: 18rem;
+            height: 6.66rem;
         }
         .header__burger-wrapper{
-            border-radius: 2px;
+            padding: 6px;
+
+            border-radius: 4px;
         }
         .header__burger{
             min-height: 0;
-            width: 1.41rem;
-            height: 1.41rem;
+            width: 3.6rem;
+            height: 3.6rem;
             padding: 2px 2px;
-            
             align-items: center;
             gap: 1px;
         }
         .header__burger span{
-            height: 0.5px;
-
+            height: 1.5px;
+            
             border-radius: 1px;
         }
         .contacts__buttons{
@@ -293,6 +287,27 @@
         }
         .contacts .contacts__info .working-days{
            flex-direction: column;
+        }
+        .questions .faq__title {
+            text-align: center;
+
+            padding-right: 0px;
+        }
+        .questions .faq details {
+            padding-right: 3.57rem;;
+        }
+        .questions .faq details summary {
+            flex-direction: column;
+        }
+        .questions .faq details summary::after {
+            font-size: 3.5rem;
+            
+            top: 0px;
+        }
+        .questions .faq details p{
+            text-align: justify;
+            
+            padding-left: 0px;
         }
     }
 }

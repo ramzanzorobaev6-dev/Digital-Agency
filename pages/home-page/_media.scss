@@ -82,14 +82,14 @@
             width: 100%;
             padding-inline: 2.14rem;
         }
-        .service-list__text{
+        .service-list__text, .why-choose .benefits__card-text{
             text-align: center;
             max-width: 30rem;
         }
         .services-list .illustration{
             flex-direction: row;
         }
-        .services-list .illustration__title{
+        .service-list .illustration__title {
             text-align: center;
         }
     }
@@ -143,9 +143,6 @@
 
             border-right: none;
         }
-        // .why-choose .benefits__card-first-child {
-        //     border-top: 1px solid $color-20-grey;
-        // }
         .why-choose .benefits__card-text{
             max-width: 30rem;
         }
@@ -216,10 +213,10 @@
         .header__burger {
             display: grid; // показываем бургер
             align-items: center;
-            gap: 3px;
+            gap: 4px;
         }
         .header__burger span{
-            height: 1.5px;
+            height: 1.6px;
         }
         .header__burger-wrapper{
             display: flex;
@@ -304,34 +301,79 @@
         .interest .feedback__wrapper{
             border: none;
         }
+        .why-choose .benefits .benefits__card {
+            padding: 1.7rem;
+
+            gap: 2rem;
+        }
+        .why-choose .benefits .illustration {
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        .why-choose .benefits .illustration__title{
+            text-align: center;
+        }
     }
 }
 @media(max-width: 270px){
     .home-page{
         .header__logo{
-            width: 8.57rem;
-            height: 2.85rem;
+            width: 18rem;
+            height: 6.66rem;
         }
         .header__burger-wrapper{
-            border-radius: 2px;
+            padding: 6px;
+
+            border-radius: 4px;
         }
         .header__burger{
             min-height: 0;
-            width: 1.41rem;
-            height: 1.41rem;
+            width: 3.6rem;
+            height: 3.6rem;
             padding: 2px 2px;
-            
             align-items: center;
             gap: 1px;
+
+            // min-height: 0;
+            // width: 1.41rem;
+            // height: 1.41rem;
+            // padding: 2px 2px;
+            
+            // align-items: center;
+            // gap: 1px;
         }
         .header__burger span{
-            height: 0.5px;
-
+            height: 1.5px;
+            
             border-radius: 1px;
+        }
+        .hero .companies__card {
+            border: none;
         }
         .interest .feedback__wrapper{
             padding: 0;
             padding-block: 5.714rem;
+        }
+        .questions .faq__title {
+            text-align: center;
+
+            padding-right: 0px;
+        }
+        .questions .faq details {
+            padding-right: 3.57rem;;
+        }
+        .questions .faq details summary {
+            flex-direction: column;
+        }
+        .questions .faq details summary::after {
+            font-size: 3.5rem;
+            
+            top: 0px;
+        }
+        .questions .faq details p{
+            text-align: justify;
+            
+            padding-left: 0px;
         }
     }
 }
