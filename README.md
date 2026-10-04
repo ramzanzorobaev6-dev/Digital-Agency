@@ -139,7 +139,7 @@ Implemented practices include:
 Clone the repository:
 
 ```bash
-git clone https://ramzanzorobaev6-dev.github.io/Digital-Agency/
+git clone https://github.com/ramzanzorobaev6-dev/Digital-Agency.git
 ```
 
 Open the project in your code editor and run it using a local development server.
@@ -148,11 +148,18 @@ For example, you can use the **Live Server** extension in Visual Studio Code.
 
 ## 🔗 Live Demo
 
-[View Live Demo](live-demo-url)
+[View Live Demo](https://ramzanzorobaev6-dev.github.io/Digital-Agency/)
 
 ## 📸 Preview
 
-*Add screenshots of the project here.*
+### Home
+
+<img src="https://github.com/user-attachments/assets/76d958e2-338d-4bb0-9293-0c7dd3dc0c71" alt="Digital Agency Home page">
+
+### Services
+
+<img src="https://github.com/user-attachments/assets/1a5afa54-070d-4f8a-8fca-48f7e8f09150" alt="Digital Agency Services page">
+
 
 ## 👤 Author
 
